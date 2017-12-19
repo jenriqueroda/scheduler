@@ -7,6 +7,14 @@ import { LeftMenuComponent } from './layout/left-menu/left-menu.component';
 import { MainPageComponent } from './content/main-page/main-page.component';
 import { EntitiesComponent } from './content/entity/entities/entities.component';
 import { EntityinfoComponent } from './content/entity/entityinfo/entityinfo.component';
+import { Routes, RouterModule } from '@angular/router';
+
+
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: MainPageComponent },
+  { path: 'entities', component: EntitiesComponent }
+];
 
 @NgModule({
   declarations: [
@@ -18,7 +26,8 @@ import { EntityinfoComponent } from './content/entity/entityinfo/entityinfo.comp
     EntityinfoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
