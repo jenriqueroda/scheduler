@@ -8,6 +8,7 @@ import { MainPageComponent } from './content/main-page/main-page.component';
 import { EntitiesComponent } from './content/entity/entities/entities.component';
 import { EntityinfoComponent } from './content/entity/entityinfo/entityinfo.component';
 import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -27,7 +28,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
